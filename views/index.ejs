@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blog articles</h1>
+    <button type="butaton" class="button1">new article</button>
+    
+    <form action="/submit" method="POST" class="form1 hidden">
+        <input type="text" id="lname" name="lname" placeholder="title"><br>
+        <input type="text" id="fname" name="fname" placeholder="start writing"><br>
+        <input type="submit" value="Submit">
+      </form>
+
+    <div class="something">
+        <% for (let i = 0; i < arr.length; i++) { %>
+            <% if (arr[i]) { %> 
+                <div class="posts blah" id="post<%= i %>">
+                    <h3 id="title<%= i %>"><%- arr[i].lname %></h3>
+                    <p id="content<%= i %>"><%- arr[i].fname %></p>
+                
+                    <form action="/del" method="GET" class="button2">
+                        <input type="hidden" name="index" value="<%= i %>">
+                        <input type="submit" value="delete">
+                    </form>
+                    <button class="button3 xy" data-i="<%= i %>">edit</button>
+                </div>
+                
+            <% } %>
+        <% } %>
+    </div>
+</body>
+<script src="index2.js"></script>
+</html>
