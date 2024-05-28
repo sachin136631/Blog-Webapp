@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Blog articles</h1>
-    <button type="butaton" class="button1">new article</button>
+    <button type="butaton" class="button1">New Article</button>
     
     <form action="/submit" method="POST" class="form1 hidden">
         <input type="text" id="lname" name="lname" placeholder="title"><br>
@@ -25,9 +25,9 @@
                 
                     <form action="/del" method="GET" class="button2">
                         <input type="hidden" name="index" value="<%= i %>">
-                        <input type="submit" value="delete">
+                        <input type="submit" value="Delete">
                     </form>
-                    <button class="button3 xy" data-i="<%= i %>">edit</button>
+                    <button class="button3 xy" data-i="<%= i %>">Edit</button>
                 </div>
                 
             <% } %>
